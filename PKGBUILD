@@ -33,13 +33,15 @@ source=("${pkgname}::git+https://github.com/alicevision/meshroom.git${fragment}"
         "git+https://github.com/alicevision/qmlAlembic.git${fragment}"
         "pyside_property_error.patch"
         "Fix-incompatibility-with-recent-cx_Freeze.patch"
+        "python3.10.patch"
         )
 sha256sums=('SKIP'
             'SKIP'
             'SKIP'
             'SKIP'
             'e211783ead22d388c72f60bac7ab95d670a4d6ae196225c15038b5c9e7c80fdc'
-            '40ee489604627e5be1b8ce5f3fdd4b1828a5588427fda298b61aa37beb9125c5')
+            '40ee489604627e5be1b8ce5f3fdd4b1828a5588427fda298b61aa37beb9125c5'
+            '9598e80386334c80624d0cafd9190f90e3eb0eb114d6bb9ba2289ad8d2ce9597')
 ((ENABLE_QTALICEVISION)) && {
   source+=("git+https://github.com/alicevision/qtAliceVision.git#commit=517fc5ffb43471b12f71aa8b9881cf0634647a93^")
   sha256sums+=('SKIP')
@@ -68,6 +70,8 @@ prepare() {
   patch -Np1 -i "$srcdir"/pyside_property_error.patch
   # back port b9a7174886d7a215818f382f9d5c05226f86a3ff
   patch -Np1 -i "$srcdir"/Fix-incompatibility-with-recent-cx_Freeze.patch
+  #
+  patch -Np1 -i "$srcdir"/python3.10.patch
 }
 
 build() {

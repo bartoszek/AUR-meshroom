@@ -32,11 +32,13 @@ pkgbase = meshroom
 	source = git+https://github.com/alicevision/qmlAlembic.git#tag=v2021.1.0
 	source = pyside_property_error.patch
 	source = Fix-incompatibility-with-recent-cx_Freeze.patch
+	source = python3.10.patch
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = SKIP
 	sha256sums = e211783ead22d388c72f60bac7ab95d670a4d6ae196225c15038b5c9e7c80fdc
 	sha256sums = 40ee489604627e5be1b8ce5f3fdd4b1828a5588427fda298b61aa37beb9125c5
+	sha256sums = 9598e80386334c80624d0cafd9190f90e3eb0eb114d6bb9ba2289ad8d2ce9597
 
 pkgname = meshroom
